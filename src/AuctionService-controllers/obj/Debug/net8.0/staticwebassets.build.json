@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "t3oYCMEn19zIUhoUgC9WtRpbdEuOKJhRmtlzY8+auU4=",
+  "Hash": "Y9CukJnGdIbIAD29vT+T1P7Sf7adUMxZOsQTzF5/KiM=",
   "Source": "AuctionService-controllers",
   "BasePath": "_content/AuctionService-controllers",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

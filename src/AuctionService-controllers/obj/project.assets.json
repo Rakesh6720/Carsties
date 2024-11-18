@@ -2252,11 +2252,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rbaru\\projects\\nextjs\\Carsties\\src\\AuctionService-controllers\\AuctionService-controllers.csproj",
+      "projectUniqueName": "C:\\Users\\rbaru\\projects\\nextjs\\carsties\\src\\AuctionService-controllers\\AuctionService-controllers.csproj",
       "projectName": "AuctionService-controllers",
-      "projectPath": "C:\\Users\\rbaru\\projects\\nextjs\\Carsties\\src\\AuctionService-controllers\\AuctionService-controllers.csproj",
+      "projectPath": "C:\\Users\\rbaru\\projects\\nextjs\\carsties\\src\\AuctionService-controllers\\AuctionService-controllers.csproj",
       "packagesPath": "C:\\Users\\rbaru\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rbaru\\projects\\nextjs\\Carsties\\src\\AuctionService-controllers\\obj\\",
+      "outputPath": "C:\\Users\\rbaru\\projects\\nextjs\\carsties\\src\\AuctionService-controllers\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2284,7 +2284,13 @@
         "warnAsError": [
           "NU1605"
         ]
-      }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "all"
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -2324,7 +2330,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-preview.3.23178.7\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
