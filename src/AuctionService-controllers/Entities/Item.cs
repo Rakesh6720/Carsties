@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Threading.Tasks;
 
 namespace AuctionService_controllers.Entities
 {
+    [Table("Items")]
     public class Item
     {
         public Guid Id { get; set; }
