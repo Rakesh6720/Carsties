@@ -65,5 +65,29 @@ namespace AuctionService_controllers.Controllers
 
             return CreatedAtAction(nameof(GetAuction), new { id = auction.Id }, _mapper.Map<AuctionDto>(auction));
         }
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult<AuctionDto>> UpdateAuction(Guid id, UpdateAuctionDto updateAuctionDto)
+        {
+            var auction = await _context.Auctions
+                .Include(x => x.Item)
+                .FirstOrDefaultAsync(x => x.Id == id);
+
+            if (auction == null)
+            {
+                return NotFound();
+            }
+
+            auction.Item.Make = updateAuctionDto.Make ?? auction.Item.Make;
+            auction.Item.Model = updateAuctionDto.Model ?? auction.Item.Model;
+            auction.Item.Year = updateAuctionDto.Year ?? auction.Item.Year;
+            auction.Item.Mileage = updateAuctionDto.Mileage ?? auction.Item.Mileage;
+            auction.Item.Color = updateAuctionDto.Color ?? auction.Item.Color;
+
+
+            await _context.SaveChangesAsync();
+
+            return Ok(_mapper.Map<AuctionDto>(auction));
+        }
     }
 }
