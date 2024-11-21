@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0d4fX099JP0=",
+  "dgSpecHash": "MXkySwA4bOA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\rbaru\\projects\\nextjs\\carsties\\src\\auctionservice-controllers\\AuctionService-controllers.csproj",
+  "projectFilePath": "C:\\Users\\rbaru\\projects\\nextjs\\Carsties\\src\\AuctionService-controllers\\AuctionService-controllers.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rbaru\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\rbaru\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
