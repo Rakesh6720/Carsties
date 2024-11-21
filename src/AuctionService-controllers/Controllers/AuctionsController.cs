@@ -89,5 +89,22 @@ namespace AuctionService_controllers.Controllers
 
             return Ok(_mapper.Map<AuctionDto>(auction));
         }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeleteAuction(Guid id)
+        {
+            var auction = await _context.Auctions
+                .FirstOrDefaultAsync(x => x.Id == id);
+
+            if (auction == null)
+            {
+                return NotFound();
+            }
+
+            _context.Auctions.Remove(auction);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
     }
 }
