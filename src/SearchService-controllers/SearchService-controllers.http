@@ -1,6 +1,0 @@
-@SearchService_controllers_HostAddress = http://localhost:5039
-
-GET {{SearchService_controllers_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
