@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AuctionService_controllers.Data;
 using AuctionService_controllers.DTOs;
+using AuctionService_controllers.Entities;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -47,6 +48,22 @@ namespace AuctionService_controllers.Controllers
             }
 
             return Ok(_mapper.Map<AuctionDto>(auction));
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<AuctionDto>> CreateAuction(CreateAuctionDto createAuctionDto)
+        {
+            var auction = _mapper.Map<Auction>(createAuctionDto);
+
+            // TODO: add current user as seller
+            auction.Seller = "test";
+
+            auction.Id = Guid.NewGuid();
+
+            _context.Auctions.Add(auction);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction(nameof(GetAuction), new { id = auction.Id }, _mapper.Map<AuctionDto>(auction));
         }
     }
 }
