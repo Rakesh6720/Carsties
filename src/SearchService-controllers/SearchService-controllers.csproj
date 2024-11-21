@@ -7,4 +7,9 @@
     <RootNamespace>SearchService_controllers</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="MongoDB.Entities" Version="22.0.0" />
+  </ItemGroup>
+
 </Project>
