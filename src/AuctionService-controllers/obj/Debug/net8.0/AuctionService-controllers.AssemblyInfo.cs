@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AuctionService-controllers")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3b21135748fcc67ea6f9f19e2aec91bd52d066e0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+48ae0ac4c90cc1365929aa3fd60b177a8fbabb01")]
 [assembly: System.Reflection.AssemblyProductAttribute("AuctionService-controllers")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AuctionService-controllers")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
