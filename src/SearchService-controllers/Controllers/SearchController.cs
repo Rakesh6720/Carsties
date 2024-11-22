@@ -18,6 +18,11 @@ namespace SearchService_controllers.Controllers
             var query = DB.Find<Item>();
             query.Sort(x => x.Ascending(x => x.Make));
 
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                query.Match(Search.Full, searchTerm).SortByTextScore();
+            }
+
             var result = await query.ExecuteAsync();
 
             return result;
