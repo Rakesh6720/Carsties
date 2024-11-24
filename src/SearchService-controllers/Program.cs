@@ -1,3 +1,4 @@
+using MassTransit;
 using MongoDB.Driver;
 using MongoDB.Entities;
 using Polly;
@@ -13,6 +14,12 @@ builder.Services.AddControllers();
 
 builder.Services.AddHttpClient<AuctionServiceHttpClient>()
     .AddPolicyHandler(GetPolicy());
+
+builder.Services.AddMassTransit(x => {
+    x.UsingRabbitMq((context, cfg) => {
+        cfg.ConfigureEndpoints(context);
+    });
+});
 
 var app = builder.Build();
 
