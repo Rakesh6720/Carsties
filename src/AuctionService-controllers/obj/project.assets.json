@@ -1051,6 +1051,16 @@
         "build": {
           "buildTransitive/net6.0/_._": {}
         }
+      },
+      "Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Contracts.dll": {}
+        }
       }
     }
   },
@@ -2700,11 +2710,17 @@
         "system.threading.ratelimiting.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Contracts/1.0.0": {
+      "type": "project",
+      "path": "../Contracts/Contracts.csproj",
+      "msbuildProject": "../Contracts/Contracts.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
+      "Contracts >= 1.0.0",
       "MassTransit.RabbitMQ >= 8.3.2",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.11",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 8.0.11"
@@ -2717,11 +2733,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\rbaru\\projects\\nextjs\\carsties\\src\\AuctionService-controllers\\AuctionService-controllers.csproj",
+      "projectUniqueName": "C:\\Users\\rbaru\\projects\\nextjs\\carsties\\src\\AuctionService-controllers\\AuctionService-controllers.csproj",
       "projectName": "AuctionService-controllers",
-      "projectPath": "c:\\Users\\rbaru\\projects\\nextjs\\carsties\\src\\AuctionService-controllers\\AuctionService-controllers.csproj",
+      "projectPath": "C:\\Users\\rbaru\\projects\\nextjs\\carsties\\src\\AuctionService-controllers\\AuctionService-controllers.csproj",
       "packagesPath": "C:\\Users\\rbaru\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\rbaru\\projects\\nextjs\\carsties\\src\\AuctionService-controllers\\obj\\",
+      "outputPath": "C:\\Users\\rbaru\\projects\\nextjs\\carsties\\src\\AuctionService-controllers\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2742,7 +2758,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\rbaru\\projects\\nextjs\\carsties\\src\\Contracts\\Contracts.csproj": {
+              "projectPath": "C:\\Users\\rbaru\\projects\\nextjs\\carsties\\src\\Contracts\\Contracts.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
