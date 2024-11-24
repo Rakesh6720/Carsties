@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rbaru\\projects\\nextjs\\carsties\\src\\auctionservice-controllers\\AuctionService-controllers.csproj": {}
+    "C:\\Users\\rbaru\\projects\\nextjs\\carsties\\src\\AuctionService-controllers\\AuctionService-controllers.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rbaru\\projects\\nextjs\\carsties\\src\\auctionservice-controllers\\AuctionService-controllers.csproj": {
+    "C:\\Users\\rbaru\\projects\\nextjs\\carsties\\src\\AuctionService-controllers\\AuctionService-controllers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rbaru\\projects\\nextjs\\carsties\\src\\auctionservice-controllers\\AuctionService-controllers.csproj",
+        "projectUniqueName": "C:\\Users\\rbaru\\projects\\nextjs\\carsties\\src\\AuctionService-controllers\\AuctionService-controllers.csproj",
         "projectName": "AuctionService-controllers",
-        "projectPath": "C:\\Users\\rbaru\\projects\\nextjs\\carsties\\src\\auctionservice-controllers\\AuctionService-controllers.csproj",
+        "projectPath": "C:\\Users\\rbaru\\projects\\nextjs\\carsties\\src\\AuctionService-controllers\\AuctionService-controllers.csproj",
         "packagesPath": "C:\\Users\\rbaru\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rbaru\\projects\\nextjs\\carsties\\src\\auctionservice-controllers\\obj\\",
+        "outputPath": "C:\\Users\\rbaru\\projects\\nextjs\\carsties\\src\\AuctionService-controllers\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
