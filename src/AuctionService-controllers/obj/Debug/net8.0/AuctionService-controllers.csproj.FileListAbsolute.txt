@@ -109,3 +109,9 @@ C:\Users\rbaru\projects\nextjs\carsties\src\auctionservice-controllers\obj\Debug
 C:\Users\rbaru\projects\nextjs\carsties\src\auctionservice-controllers\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 C:\Users\rbaru\projects\nextjs\carsties\src\auctionservice-controllers\obj\Debug\net8.0\staticwebassets\msbuild.AuctionService-controllers.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
 C:\Users\rbaru\projects\nextjs\carsties\src\auctionservice-controllers\obj\Debug\net8.0\AuctionS.D3A3D85A.Up2Date
+C:\Users\rbaru\projects\nextjs\carsties\src\auctionservice-controllers\bin\Debug\net8.0\MassTransit.dll
+C:\Users\rbaru\projects\nextjs\carsties\src\auctionservice-controllers\bin\Debug\net8.0\MassTransit.Abstractions.dll
+C:\Users\rbaru\projects\nextjs\carsties\src\auctionservice-controllers\bin\Debug\net8.0\MassTransit.RabbitMqTransport.dll
+C:\Users\rbaru\projects\nextjs\carsties\src\auctionservice-controllers\bin\Debug\net8.0\RabbitMQ.Client.dll
+C:\Users\rbaru\projects\nextjs\carsties\src\auctionservice-controllers\bin\Debug\net8.0\Contracts.dll
+C:\Users\rbaru\projects\nextjs\carsties\src\auctionservice-controllers\bin\Debug\net8.0\Contracts.pdb
