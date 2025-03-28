@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using MongoDB.Entities;
 
-namespace SearchService.Modes
+namespace SearchService.Models
 {
     public class Item : Entity
     {           

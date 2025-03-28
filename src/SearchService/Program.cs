@@ -3,7 +3,7 @@ using MongoDB.Entities;
 using Polly;
 using Polly.Extensions.Http;
 using SearchService.Data;
-using SearchService.Modes;
+using SearchService.Models;
 using SearchService.Services;
 using MassTransit;
 
@@ -15,6 +15,8 @@ builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 
 builder.Services.AddHttpClient<AuctionServiceHttpClient>().AddPolicyHandler(GetPolicy());
+
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddMassTransit(x => {
     x.UsingRabbitMq((context, cfg) => {
