@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Entities;
-using SearchService.Modes;
+using SearchService.Models;
 using SearchService.RequestHelpers;
 
 namespace SearchService.Controllers

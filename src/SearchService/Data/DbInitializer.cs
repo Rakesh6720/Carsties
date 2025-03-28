@@ -5,7 +5,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using MongoDB.Driver;
 using MongoDB.Entities;
-using SearchService.Modes;
+using SearchService.Models;
 using SearchService.Services;
 
 namespace SearchService.Data

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MongoDB.Entities;
-using SearchService.Modes;
+using SearchService.Models;
 
 namespace SearchService.Services
 {
