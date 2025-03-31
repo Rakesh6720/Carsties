@@ -77,10 +77,13 @@ public class AuctionsController : ControllerBase
         auction.Item.Mileage = updateAuctionDto.Mileage ?? auction.Item.Mileage;
         auction.Item.Color = updateAuctionDto.Color ?? auction.Item.Color;
 
-        var result = await _dbContext.SaveChangesAsync() > 0;
-        if (!result) return BadRequest("Failed to update auction");
+        await _publishEndpoint.Publish(_mapper.Map<AuctionUpdated>(auction));
 
-        return Ok();
+        var result = await _dbContext.SaveChangesAsync() > 0;
+        
+        if (result) return Ok();
+
+        return BadRequest("Failed to update auction");       
     }
 
     [HttpDelete("{id}")]
@@ -92,6 +95,8 @@ public class AuctionsController : ControllerBase
         // TODO: check seller == username
 
         _dbContext.Auctions.Remove(auction);
+
+        await _publishEndpoint.Publish(_mapper.Map<AuctionDeleted>(new {Id = auction.Id.ToString()}));
         
         var result = await _dbContext.SaveChangesAsync() > 0;
         
