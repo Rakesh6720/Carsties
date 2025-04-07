@@ -37,7 +37,9 @@ internal static class HostingExtensions
             .AddAspNetIdentity<ApplicationUser>();
         
         builder.Services.ConfigureApplicationCookie(options => {
-            options.Cookie.SameSite = SameSiteMode.Lax;
+            options.Cookie.SecurePolicy = CookieSecurePolicy.None; // No HTTPS requirement
+            options.Cookie.SameSite = SameSiteMode.Lax; // Restricts cross-site requests
+            options.Cookie.HttpOnly = true; // Prevents JavaScript access
         });
         
         builder.Services.AddAuthentication();
