@@ -1,9 +1,6 @@
-using MongoDB.Driver;
-using MongoDB.Entities;
 using Polly;
 using Polly.Extensions.Http;
 using SearchService.Data;
-using SearchService.Models;
 using SearchService.Services;
 using MassTransit;
 using SearchService.Consumers;

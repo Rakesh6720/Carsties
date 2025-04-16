@@ -29,17 +29,34 @@ internal static class HostingExtensions
                 options.Events.RaiseSuccessEvents = true;
 
                 // see https://docs.duendesoftware.com/identityserver/v6/fundamentals/resources/
-                // options.EmitStaticAudienceClaim = true;
+                //options.EmitStaticAudienceClaim = true;
             })
             .AddInMemoryIdentityResources(Config.IdentityResources)
             .AddInMemoryApiScopes(Config.ApiScopes)
             .AddInMemoryClients(Config.Clients)
             .AddAspNetIdentity<ApplicationUser>();
-        
-        builder.Services.ConfigureApplicationCookie(options => {
-            options.Cookie.SecurePolicy = CookieSecurePolicy.None; // No HTTPS requirement
-            options.Cookie.SameSite = SameSiteMode.Lax; // Restricts cross-site requests
-            options.Cookie.HttpOnly = true; // Prevents JavaScript access
+
+        builder.Services.ConfigureApplicationCookie(options =>
+        {
+            options.Cookie.Name = "Identity.Application"; // Ensure the cookie name matches the scheme
+            options.Cookie.HttpOnly = true; // Prevent JavaScript access
+            options.Cookie.SameSite = SameSiteMode.Lax; // Adjust SameSite mode as needed
+            options.Cookie.SecurePolicy = CookieSecurePolicy.Always; // Use HTTPS for secure cookies
+            options.ExpireTimeSpan = TimeSpan.FromMinutes(60); // Set cookie expiration
+            options.LoginPath = "/Account/Login"; // Path to the login page
+            options.LogoutPath = "/Account/Logout"; // Path to the logout page
+            options.AccessDeniedPath = "/Account/AccessDenied"; // Path for access denied
+        });
+
+        builder.Services.AddCors(options =>
+        {
+            options.AddPolicy("MyPolicy", builder =>
+            {
+                builder
+                    .AllowAnyOrigin()
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
+            });
         });
         
         builder.Services.AddAuthentication();
@@ -58,6 +75,8 @@ internal static class HostingExtensions
 
         app.UseStaticFiles();
         app.UseRouting();
+        app.UseCors("MyPolicy");
+        app.UseAuthentication();
         app.UseIdentityServer();
         app.UseAuthorization();
         

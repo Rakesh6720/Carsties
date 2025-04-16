@@ -13,10 +13,11 @@ namespace IdentityService.Pages.Account.Register
         [Required]
         public string Password { get; set; }
         [Required]
-        public string Username {get; set;}
+        public string Username { get; set; }
         [Required]
-        public string FullName {get; set;}
-        public string ReturnUrl {get; set;}
+        public string FullName { get; set; }
+        [Required]
+        public string ReturnUrl { get; set; }
         public string Button {get; set;}
     }
 }

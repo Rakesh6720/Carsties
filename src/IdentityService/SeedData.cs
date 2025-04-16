@@ -20,7 +20,7 @@ public class SeedData
 
         if (userMgr.Users.Any())
         {
-            Log.Debug("UserManager has users, skipping seeding.");
+            Log.Debug("UserManager already has users, skipping seeding.");
             return;
         }
 
@@ -40,7 +40,7 @@ public class SeedData
             }
 
             result = userMgr.AddClaimsAsync(alice, new Claim[]{
-                            new Claim(JwtClaimTypes.Name, "Alice Smith")
+                            new Claim(JwtClaimTypes.Name, "Alice Smith"),
                         }).Result;
             if (!result.Succeeded)
             {
@@ -69,7 +69,7 @@ public class SeedData
             }
 
             result = userMgr.AddClaimsAsync(bob, new Claim[]{
-                            new Claim(JwtClaimTypes.Name, "Bob Smith")
+                            new Claim(JwtClaimTypes.Name, "Bob Smith"),
                         }).Result;
             if (!result.Succeeded)
             {
