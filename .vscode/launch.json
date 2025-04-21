@@ -37,7 +37,7 @@
       "request": "attach",
       "platform": "netCore",
       "sourceFileMap": {
-        "app": "${workspaceFolder}"
+        "/app": "${workspaceFolder}/src/IdentityService"
       }
     }
   ]
